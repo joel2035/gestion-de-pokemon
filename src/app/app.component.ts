@@ -7,15 +7,14 @@ import Pokemon from "../models/pokemon";
   templateUrl: 'app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  pokemonListe = POKEMONS;
-constructor() {
-}
-  ngOnInit(){
-  console.table(this.pokemonListe)
-    this.selectPokemon(this.pokemonListe[0])
+export class  AppComponent implements  OnInit{
+  PokemonList:Pokemon[] = POKEMONS;
+
+  ngOnInit() {
+    console.table(this.PokemonList)
+    this.selectPokemon(this.PokemonList[0])
   }
   selectPokemon(pokemon:Pokemon){
-    console.log(`Vous avez cliqué sur le pokemon ${pokemon.name}`)
+    console.log(`vous avez cliqué sur le pokemon ${pokemon.name}`)
   }
 }

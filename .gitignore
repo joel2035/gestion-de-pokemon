@@ -20,7 +20,7 @@ package.json
 
 # IDEs and editors
 .idea/
-.project
+.project:q
 .classpath
 .c9/
 *.launch
