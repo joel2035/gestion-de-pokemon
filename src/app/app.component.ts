@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {POKEMONS} from "../models/mock-pokemon";
 import Pokemon from "../models/pokemon";
 
@@ -7,13 +7,6 @@ import Pokemon from "../models/pokemon";
   templateUrl: 'app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class  AppComponent implements  OnInit{
-  PokemonList:Pokemon[] = POKEMONS;
+export class  AppComponent {
 
-  ngOnInit() {
-    console.table(this.PokemonList)
-
-  }
-  selectPokemon(){
-  }
 }
