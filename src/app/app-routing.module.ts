@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {ListePokemonComponent} from "./liste-pokemon/liste-pokemon.component";
 import {DetailPokemonComponent} from "./detail-pokemon/detail-pokemon.component";
+import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 
 const routes: Routes = [
   {
-    path:'pokemon',
+    path:'pokemons',
     component:ListePokemonComponent
   },
   {
@@ -16,6 +17,11 @@ const routes: Routes = [
     path:"",
     redirectTo: "pokemon",
     pathMatch:"full"
+  },
+
+  {
+    path:"**",
+    component:PageNotFoundComponent
   }
 ];
 

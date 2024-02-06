@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import Pokemon from "../../models/pokemon";
 import POKEMONS from "../../models/mock-pokemon";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-liste-pokemon',
@@ -9,5 +10,12 @@ import POKEMONS from "../../models/mock-pokemon";
   ]
 })
 export class ListePokemonComponent {
+
+  constructor(private router:Router) {
+  }
   PokemonList:Pokemon[] = POKEMONS;
+
+  goTolPokemon(pokemon:Pokemon){
+    this.router.navigate(['/pokemon', pokemon.id])
+  }
 }
