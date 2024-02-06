@@ -5,14 +5,14 @@ import {Directive, ElementRef, HostListener, Input,} from '@angular/core';
 export class BorderCardDirective {
   private  initiialColor:string = '#F5F5F5';
   private  defaultColor:string='#009688';
-  private defaultHeight: number= 190;
+  private defaultHeight: number= 180;
   constructor(private el: ElementRef) {
     this.setHeight(this.defaultHeight);
     this.setBorder(this.initiialColor);
   }
   @Input('pokemonBorderCard') borderColor:string;
   @HostListener('mouseenter') onMouseEnter() {
-    this.setBorder( this.borderColor ||this.defaultColor);
+    this.setBorder( this.borderColor || this.defaultColor);
   }
   @HostListener('mouseleave') onMouseLeave(){
     this.setBorder('#F5F5F5');
