@@ -3,12 +3,12 @@ import {Directive, ElementRef, HostListener, Input,} from '@angular/core';
   selector: '[pokemonBorderCard]'
 })
 export class BorderCardDirective {
-  private  initiialColor:string = '#F5F5F5';
-  private  defaultColor:string='#009688';
+  private  initialColor:string = '#F5F5F5';
+  private  defaultColor:string='#009689';
   private defaultHeight: number= 180;
   constructor(private el: ElementRef) {
     this.setHeight(this.defaultHeight);
-    this.setBorder(this.initiialColor);
+    this.setBorder(this.initialColor);
   }
   @Input('pokemonBorderCard') borderColor:string;
   @HostListener('mouseenter') onMouseEnter() {
