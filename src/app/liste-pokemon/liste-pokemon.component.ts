@@ -11,11 +11,9 @@ import {Router} from "@angular/router";
 })
 export class ListePokemonComponent {
 
-  constructor(private router:Router) {
-  }
+  constructor(private router:Router) {}
   PokemonList:Pokemon[] = POKEMONS;
-
-  goTolPokemon(pokemon:Pokemon){
+  goToPokemon(pokemon:Pokemon){
     this.router.navigate(['/pokemon', pokemon.id])
   }
 }

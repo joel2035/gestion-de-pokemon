@@ -15,7 +15,7 @@ export class BorderCardDirective {
     this.setBorder( this.borderColor || this.defaultColor);
   }
   @HostListener('mouseleave') onMouseLeave(){
-    this.setBorder('#F5F5F5');
+    this.setBorder(this.initialColor);
   }
   setHeight(height:number){
     this.el.nativeElement.style.height = `${height}px`;

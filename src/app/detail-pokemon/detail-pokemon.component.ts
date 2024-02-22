@@ -22,7 +22,7 @@ export class DetailPokemonComponent implements OnInit{
      }
  }
 
-    goToPokemonList() {
-    this.router.navigate(['/pokemon'])
-    }
+   goToPokemonList(){
+      this.router.navigate(['/pokemons'])
+   }
 }

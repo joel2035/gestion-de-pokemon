@@ -15,10 +15,9 @@ const routes: Routes = [
   },
   {
     path:"",
-    redirectTo: "pokemon",
+    redirectTo: "pokemons",
     pathMatch:"full"
   },
-
   {
     path:"**",
     component:PageNotFoundComponent
@@ -29,4 +28,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
