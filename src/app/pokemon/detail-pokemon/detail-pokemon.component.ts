@@ -14,9 +14,9 @@ export class DetailPokemonComponent implements OnInit{
     pokemon:Pokemon | undefined;
   constructor(private route:ActivatedRoute, private router:Router, private pokemonService:PokemonService) {
   }
- ngOnInit() {
+ ngOnInit():void {
 
-    const pokemonId:string|null = this.route.snapshot.paramMap.get('id');
+    const pokemonId: string | null = this.route.snapshot.paramMap.get('id');
 
      if(pokemonId){
          this.pokemon = this.pokemonService.getPokemonById(+pokemonId)
@@ -24,7 +24,7 @@ export class DetailPokemonComponent implements OnInit{
 
  }
 
-   goToPokemonList(){
-      this.router.navigate(['/pokemons'])
+   goToPokemonList():void{
+      this.router.navigate( ['/pokemons'])
    }
 }
